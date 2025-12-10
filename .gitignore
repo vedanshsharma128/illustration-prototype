@@ -1,0 +1,25 @@
+# --- Security & Secrets (CRITICAL) ---
+.env
+.env.local
+.env.*.local
+backend/.env
+frontend/.env.local
+
+# --- Python / Backend ---
+backend/venv/
+backend/__pycache__/
+backend/temp/
+*.pyc
+
+# --- Node / Frontend ---
+frontend/node_modules/
+frontend/.next/
+frontend/out/
+frontend/build/
+frontend/.vercel
+
+# --- System & IDE ---
+.DS_Store
+.vscode/
+.idea/
+*.log
