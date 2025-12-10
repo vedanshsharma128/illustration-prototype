@@ -27,3 +27,63 @@ A personalized illustration generator that transforms user inputs into stylized 
 ```bash
 git clone <your-repo-url>
 cd illustration-prototype
+```
+### 2.Frontend Setup
+```bash
+cd frontend
+npm install
+npm run dev
+``` 
+Frontend runs at:
+```ardunio
+http://localhost:3000
+```
+### 3.Backend Setup
+```bash
+cd backend
+python -m venv venv
+```
+Activate virtual environment:
+#### Windows
+```bash
+venv\Scripts\activate
+```
+#### Mac/Linux
+```bash 
+source venv/bin/activate
+```
+#### Install dependencies:
+```bash
+pip install -r requirements.txt
+```
+#### Run backend:
+```bash
+uvicorn main:app --reload
+```
+#### Backend runs at:
+```arduino
+http://localhost:8000
+```
+
+## How It Works
+
+### 1.User selects:
+* Character Type
+* Age Group
+* Art Style
+* Story / Description
+
+### 2.Frontend sends request to FastAPI
+
+### 3.Backend:
+* Builds an optimized AI prompt
+* Sends it to Pollinations.ai
+* Returns the generated image
+
+### 4.Image is rendered instantly on the UI 
+
+## 👨‍💻 Author
+#### Vedansh Sharma
+Full Stack Developer & AI Engineer
+* GitHub: https://github.com/Vedanshsharma128
+* Email: vedansh0704@gmail.com
