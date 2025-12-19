@@ -49,8 +49,6 @@ async def generate_illustration(
 
         final_prompt = style_prompts.get(style, style_prompts["Disney 3D"])
         
-        # Add "nologo" to remove watermarks and "flux" for quality
-        # URL encoding the prompt is handled by requests, but we format the URL string carefully
         full_url = f"{POLLINATIONS_URL}{final_prompt}?width=1024&height=1024&seed={seed}&model=flux&nologo=true"
         
         print(f"Generating with Pollinations: {final_prompt[:50]}...")
@@ -60,7 +58,6 @@ async def generate_illustration(
 
         if response.status_code == 200:
             print("Success! Image generated.")
-            # Convert raw bytes to Base64 for frontend
             img_b64 = base64.b64encode(response.content).decode("utf-8")
             return {"status": "success", "image_url": f"data:image/jpeg;base64,{img_b64}"}
         else:
@@ -69,7 +66,6 @@ async def generate_illustration(
 
     except Exception as e:
         print(f"CRITICAL ERROR: {str(e)}")
-        # Fallback to a placeholder if everything breaks, to prevent crash
         raise HTTPException(status_code=500, detail="Internet/Generation Error. Try again.")
 
 if __name__ == "__main__":
