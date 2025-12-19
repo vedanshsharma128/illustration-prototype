@@ -6,7 +6,7 @@ import {
   ChevronRight, Image as ImgIcon, Palette, FileText, User
 } from "lucide-react";
 
-// Updated Styles List with "Edit Original"
+
 const STYLES = [
   { id: "Edit Original", name: "Edit Original (Use Script)", img: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=150&q=80" },
   { id: "Disney 3D", name: "3D Cartoon", img: "https://images.unsplash.com/photo-1618331835717-801e976710b2?auto=format&fit=crop&w=150&q=80" },
